@@ -19,12 +19,10 @@ class CandidateController extends Controller
     }
 
     public function create() : JsonResponse {
-        $candidate = new Candidate(['Rocha', 'asdasd@asdasd']);
-        $candidate->create();
-//        $candidate = new Candidate();
-//        $candidate->name = 'David';
-//        $candidate->email = 'rasdasd@com.ve';
-        $criado = Candidate::create(['David', 'david@email.com']);
+        $candidate = Candidate::create([
+            'name' => 'David',
+            'email' => 'david@email.com'
+        ]);
         return response()->json($candidate, 200);
     }
 }
