@@ -6,7 +6,7 @@ use App\Repository\EloquentRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-abstract class BaseRepository implements EloquentRepositoryInterface
+abstract class AbstractBaseRepository implements EloquentRepositoryInterface
 {
     /**
      * @var Model
