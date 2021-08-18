@@ -15,7 +15,8 @@ class CandidateController extends Controller
     }
 
     public function index() : JsonResponse {
-        return response()->json($this->candidateRepository->all(), 200);
+        $todos = $this->candidateRepository->all();
+        return response()->json($todos, 200);
     }
 
     public function create() : JsonResponse {
@@ -23,6 +24,7 @@ class CandidateController extends Controller
             'name' => 'David',
             'email' => 'david@email.com'
         ]);
+
         return response()->json($candidate, 200);
     }
 }
